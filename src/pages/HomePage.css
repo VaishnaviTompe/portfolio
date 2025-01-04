@@ -1,0 +1,49 @@
+/* Home Page Styling */
+.home-page {
+    margin-left: 220px; /* Adjust for sidebar width */
+    padding: 40px;
+    background-color: #f8f9fa; /* Light gray background */
+    min-height: 100vh; /* Ensure the page covers full viewport height */
+  }
+  
+  .home-page h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .name {
+    color: #007bff; /* Blue for name */
+  }
+  
+  .home-page h2 {
+    font-size: 2rem;
+    color: #ff0000; /* Red for title */
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #ff0000; /* Red for highlighted text */
+  }
+  
+  .home-page p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .download-btn {
+    background: #ff0000; /* Red background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background: #d00000; /* Darker red on hover */
+  }
+  
