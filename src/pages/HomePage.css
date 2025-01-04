@@ -1,49 +1,120 @@
 /* Home Page Styling */
 .home-page {
-    margin-left: 220px; /* Adjust for sidebar width */
-    padding: 40px;
-    background-color: #f8f9fa; /* Light gray background */
-    min-height: 100vh; /* Ensure the page covers full viewport height */
+  margin-left: 220px; /* Default for desktop with sidebar */
+  padding: 40px;
+  background-color: #f8f9fa; /* Light gray background */
+  min-height: 100vh; /* Ensure the page covers full viewport height */
+}
+
+/* Typography Adjustments for Responsive Design */
+.home-page h1 {
+  font-size: 3rem; /* Default for desktop */
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.2; /* Improve readability */
+}
+
+.name {
+  color: #007bff; /* Blue for name */
+}
+
+.home-page h2 {
+  font-size: 2rem; /* Default for desktop */
+  color: #ff0000; /* Red for title */
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ff0000; /* Red for highlighted text */
+}
+
+.home-page p {
+  font-size: 1.2rem; /* Default for desktop */
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.download-btn {
+  background: #ff0000; /* Red background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #d00000; /* Darker red on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .home-page {
+    margin-left: 180px; /* Adjust sidebar margin for smaller screens */
+    padding: 30px;
   }
-  
+
   .home-page h1 {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Slightly smaller font */
   }
-  
-  .name {
-    color: #007bff; /* Blue for name */
-  }
-  
+
   .home-page h2 {
-    font-size: 2rem;
-    color: #ff0000; /* Red for title */
-    margin-bottom: 20px;
+    font-size: 1.8rem; /* Adjust for smaller screens */
   }
-  
-  .highlight {
-    color: #ff0000; /* Red for highlighted text */
-  }
-  
+
   .home-page p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
   }
-  
+
   .download-btn {
-    background: #ff0000; /* Red background */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    padding: 8px 16px; /* Smaller button */
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    margin-left: 0; /* Remove sidebar margin for mobile */
+    padding: 20px;
+    text-align: center; /* Center content for mobile */
+  }
+
+  .home-page h1 {
+    font-size: 2rem;
+  }
+
+  .home-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-page p {
     font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
   }
-  
-  .download-btn:hover {
-    background: #d00000; /* Darker red on hover */
+
+  .download-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .home-page h1 {
+    font-size: 1.8rem; /* Further reduce font size */
+  }
+
+  .home-page h2 {
+    font-size: 1.2rem;
+  }
+
+  .home-page p {
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

@@ -1,77 +1,112 @@
 /* Portfolio Page Styling */
 .portfolio-page {
-    margin-left: 220px; /* Adjust for sidebar */
-    padding: 40px;
-    background-color: #f4f4f9;
-    min-height: 100vh; /* Ensure full height */
-  }
-  
-  .portfolio-page h2 {
-    font-size: 2.5rem;
-    color: #333;
+  margin-left: 220px; /* Default for desktop with sidebar */
+  padding: 40px;
+  background-color: #f4f4f9;
+  min-height: 100vh; /* Ensure full height */
+}
 
-    margin-bottom: 5px;
+.portfolio-page h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.underline1 {
+  width: 80px;
+  height: 4px;
+  background: red; /* Pinkish red underline */
+  margin: 5px 0 10px;
+}
+
+.underline2 {
+  width: 60px;
+  height: 4px;
+  background: red; /* Pinkish red underline */
+  margin: 10px 0 20px;
+}
+
+.portfolio-page h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Responsive Grid Layout for Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts based on screen size */
+  gap: 20px;
+}
+
+/* Project Card Styling */
+.project-card {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 5px solid white;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid black;
+}
+
+.project-card h5 {
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .portfolio-page {
+    margin-left: 180px; /* Adjust for smaller screens with sidebar */
+    padding: 30px;
   }
-  
-  .underline1 {
-    width: 80px;
-    height: 4px;
-    background: red; /* Pinkish red underline */
-    margin: 5px 0 10px;
-  }
-  
-  .underline2 {
-    width: 60px;
-    height: 4px;
-    background: red; /* Pinkish red underline */
-    margin: 10px 0 20px;
-  }
-  .portfolio-page h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #555;
-  }
-  
+
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduce card width for smaller screens */
   }
-  
-  .project-card {
-    background: #ffffff;
-    /* border-radius: 10px; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 5px solid white;
+}
 
+@media (max-width: 768px) {
+  .portfolio-page {
+    margin-left: 0; /* Remove sidebar margin on mobile */
+    padding: 20px;
   }
-  
-  .project-card:hover {
-    /* border: 1px solid red; */
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* One card per row on mobile screens */
   }
-  
-  .project-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-bottom: 1px solid black;
+}
+
+@media (max-width: 480px) {
+  .portfolio-page h2 {
+    font-size: 2rem; /* Smaller font size for headings */
   }
-  
+
+  .portfolio-page h3 {
+    font-size: 1.2rem;
+  }
+
   .project-card h5 {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-size: 1rem;
-    color: #333;
-    font-weight: bold;
+    font-size: 0.9rem; /* Smaller font size for card titles */
   }
-  
-  .project-card a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
+}
